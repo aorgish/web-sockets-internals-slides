@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>WebSockets Internals</title>
+
+		<meta name="description" content="Rolling Scopes - WebSockets Internals presentation">
+		<meta name="author" content="aorgish">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>WebSockets Internals</h1>
+					<p>
+					   aorgish
+					</p>
+				</section>
+
+				<section>
+					<p>
+						<strong>The main goal</strong> of the protocol is to allow bidirectional communication between an application running within a UA such as a web browser, and an application running on a distant server, not limited by the domain-origin or any other policy.
+					</p>
+				</section>
+				<section>
+					<h2>SubGoals</h2>
+					<ol>
+					<li class="fragment">Coexist with HTTP servers on ports 80 and 443
+					<li class="fragment">Differentiate from HTTP enough to cause WS clients to know a WS server from HTTP server
+					<li class="fragment">Make sure that intermediaries do not confuse WS data content for valid HTTP requests
+					</ol>
+				</section>
+				<section>
+					<p>
+					    More slides...
+					</p>
+				</section>
+				<section>
+					<h2>Links</h2>
+					<ul>
+						<li><a href="https://tools.ietf.org/html/rfc6455">RFC 6455 The WebSocket Protocol</a></li>
+						<li><a href="http://trac.tools.ietf.org/wg/hybi/trac/wiki/FAQ">WebSockets specification FAQ</a></li>
+					</ul>
+				</section>
+
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
