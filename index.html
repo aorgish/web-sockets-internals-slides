@@ -134,7 +134,7 @@ A simpler solution would be to use a single TCP connection for
 					<p>
 					    Client request
 					</p>
-                                        <pre><code data-trim contenteditable style="font-size: 30px;">
+                                        <pre><code data-trim contenteditable style="font-size: 30px; line-height: 35px;">
 GET /chat HTTP/1.1
 Host: server.example.com
 Upgrade: websocket
@@ -149,7 +149,7 @@ Sec-WebSocket-Version: 13
 					<p>
 					    Server response
 					</p>
-                                        <pre><code data-trim contenteditable style="font-size: 30px;">
+                                        <pre><code data-trim contenteditable style="font-size: 30px; line-height: 35px;">
 HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
@@ -179,9 +179,8 @@ Sec-WebSocket-Protocol: chat
                                         </ul>
 				</section>
 				<section>
-					<p>
-					    TBD : Ping-Pong problem
-					</p>
+                                        <h3>Ping-Pong</h3>
+			                <img class="plain" data-src="img/ping-pong.jpg">
 				</section>
 </section>
 <section>
@@ -189,7 +188,7 @@ Sec-WebSocket-Protocol: chat
  				<section>
                                         <h2>SubProtocols</h2>
 					<p>
-					    Sec-WebSocket-Extensions: extension-list
+					    Sec-WebSocket-Protocol: protocol-list
 					</p>
                                         <small><a href="http://www.iana.org/assignments/websocket/websocket.xml#table-subprotocol-name">WebSocket Subprotocol Name Registry</a></small>
 				</section>
@@ -260,14 +259,21 @@ Sec-WebSocket-Protocol: chat
                                         </p>
                                         <small>See more: <a href="http://www.jayway.com/2015/04/13/600k-concurrent-websocket-connections-on-aws-using-node-js/">600k concurrent websocket connections on AWS using Node.js</a></small>
                                 </section>
+<section>
 
                                 <section>
-                                        <h2>Sum up : WebSockets</h2>
-                                        <p>
-                                            TBD
-                                        </p>
-                                        <small>See more: <a href="http://www.jayway.com/2015/04/13/600k-concurrent-websocket-connections-on-aws-using-node-js/">600k concurrent websocket connections on AWS using Node.js</a></small>
+                                        <h1>Sum up : WebSockets Design Philosophy</h1>
                                 </section>
+                                <section>
+                                        <h2>Minimal Payload</h2>
+                        	        <img class="plain" data-src="img/minimal-frame.jpg">
+                                </section>
+                                <section>
+                                        <h2>Sitting on the TCP/HTTP </h2>
+                        	        <img class="plain" data-src="img/using-tcp.jpg">
+                                </section>
+
+</section>
 
 
 				<section>
