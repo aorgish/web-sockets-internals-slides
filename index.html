@@ -59,23 +59,36 @@ Historically, creating web applications that need bidirectional
 					</p>
 				</section>
 				<section>
-					<p>
+                                        <h3>Lot of connections</h3>
+			                <img class="plain" data-src="img/lot-of-communication.jpg">
+
+<!--
 The server is forced to use a number of different underlying TCP
       connections for each client: one for sending information to the
       client and a new one for each incoming message.
-					</p>
+-->
 				</section>
 				<section>
-					<p>
+                                        <h3>HTTP overhead</h3>
+			                <img class="plain" data-src="img/overload.jpg">
+					
+<!--
 The wire protocol has a high overhead, with each client-to-server
       message having an HTTP header.
-                                        </p>
+-->
+                                        
 				</section>
 				<section>
-					<p>
+                                        <h3>Client request-responce mapping </h3>
+			                <img class="plain" data-src="img/maintain-mapping.jpg">
+
+
+				
+<!--
 The client-side script is forced to maintain a mapping from the
       outgoing connections to the incoming connection to track replies.
-                                        </p>
+-->
+                                       
 				</section>
 
 				<section>
