@@ -32,6 +32,16 @@
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
+
+                <style>
+                     html.img-contain div.slide-background.present {
+                          background-size: contain;
+                     }
+ 
+                     .reveal h3.sec-color {
+                          color: red;
+                     }
+                </style>
 	</head>
 
 	<body>
@@ -58,9 +68,9 @@ Historically, creating web applications that need bidirectional
    HTTP calls
 					</p>
 				</section>
-				<section>
-                                        <h3>Lot of connections</h3>
-			                <img class="plain" data-src="img/lot-of-communication.jpg">
+				<section data-background="img/lot-of-communication.jpg">
+                                        <h3 class="sec-color">Lot of connections</h3>
+			              <!--  <img class="plain" data-src="img/lot-of-communication.jpg"> -->
 
 <!--
 The server is forced to use a number of different underlying TCP
@@ -68,19 +78,20 @@ The server is forced to use a number of different underlying TCP
       client and a new one for each incoming message.
 -->
 				</section>
-				<section>
+				<section data-background="img/overload.jpg">
                                         <h3>HTTP overhead</h3>
-			                <img class="plain" data-src="img/overload.jpg">
+			            <!--    <img class="plain" data-src="img/overload.jpg"> -->
 					
 <!--
 The wire protocol has a high overhead, with each client-to-server
       message having an HTTP header.
 -->
-                                        
+<!--                                        
 				</section>
-				<section>
-                                        <h3>Client request-responce mapping </h3>
-			                <img class="plain" data-src="img/maintain-mapping.jpg">
+				<section data-background="img/maintain-mapping.jpg">
+                                        <h3 class="sec-color">Client request-responce mapping </h3>
+-->
+			              <!--  <img class="plain" data-src="img/maintain-mapping.jpg"> -->
 
 
 				
@@ -128,8 +139,8 @@ A simpler solution would be to use a single TCP connection for
 					</ol>
 				</section>
 
-				<section>
-			                <img class="plain" data-src="img/websocket-lifecycle.png">
+				<section data-background="img/websocket-lifecycle.png" data-state="img-contain">
+			           <!--     <img class="plain" data-src="img/websocket-lifecycle.png">  -->
                                 </section>
 
 
@@ -139,8 +150,8 @@ A simpler solution would be to use a single TCP connection for
 					<h1>
 					    Handshake
 					</h1>
-                                        <p>ws://www.domain.com/path</p>
-                                        <p>wss://www.domain.com/path </p>
+                                        <p class="sec-color">ws://www.domain.com/path</p>
+                                        <p class="sec-color">wss://www.domain.com/path </p>
                                 </section>
 
 				<section>
@@ -191,9 +202,9 @@ Sec-WebSocket-Protocol: chat
                                            <li>xB-F are reserved for further control frames
                                         </ul>
 				</section>
-				<section>
-                                        <h3>Ping-Pong</h3>
-			                <img class="plain" data-src="img/ping-pong.jpg">
+				<section data-background="img/ping-pong.jpg" data-state="img-contain">
+                                        <h3 class="sec-color">Ping-Pong</h3>
+			             <!--   <img class="plain" data-src="img/ping-pong.jpg">   -->
 				</section>
 </section>
 <section>
@@ -231,10 +242,11 @@ Sec-WebSocket-Protocol: chat
 
 <section>
 
-				<section>
-                                        <h2>Long Polling vs WebSockets</h2>
-                        	        <img class="plain" data-src="img/lp-vs-ws.gif">
+				<section data-background="img/lp-vs-ws.gif" data-state="img-contain">
+                                        <h3 class="sec-color" style="background:white">Long Polling vs WebSockets</h2>
+                        	       <!-- <img class="plain" data-src="img/lp-vs-ws.gif"> -->
 				</section>
+<!--
 				<section>
                                         <h2>Long Polling</h2>
 					<p>
@@ -255,10 +267,11 @@ Sec-WebSocket-Protocol: chat
                                            </ul>
 					</p>
 				</section>
-				<section>
-                                        <h2>Comparision</h2>
-                        	        <img class="plain" data-src="img/poll-ws-compare.gif">
-                                        <small>See more: <a href="https://www.websocket.org/quantum.html">A Quantum Leap in Scalability for the Web</a></small>
+-->
+				<section data-background="img/poll-ws-compare.gif" data-state="img-contain">
+                                        <!--<h2>Comparision</h2>
+                        	        <!--<img class="plain" data-src="img/poll-ws-compare.gif">  -->
+                                        <!--<small>See more: <a href="https://www.websocket.org/quantum.html">A Quantum Leap in Scalability for the Web</a></small> -->
                  		</section>
 
 </section>
@@ -277,13 +290,13 @@ Sec-WebSocket-Protocol: chat
                                 <section>
                                         <h1>Sum up : WebSockets Design Philosophy</h1>
                                 </section>
-                                <section>
-                                        <h2>Minimal Payload</h2>
-                        	        <img class="plain" data-src="img/minimal-frame.jpg">
+                                <section data-background="img/minimal-frame.jpg" data-state="img-contain">
+                                        <h3>Minimal Payload</h2>
+                        	     <!--   <img class="plain" data-src="img/minimal-frame.jpg">  -->
                                 </section>
-                                <section>
-                                        <h2>Sitting on the TCP/HTTP </h2>
-                        	        <img class="plain" data-src="img/using-tcp.jpg">
+                                <section data-background="img/using-tcp.jpg" data-state="img-contain">
+                                        <h3>Sitting on the TCP/HTTP </h2>
+                        	     <!--   <img class="plain" data-src="img/using-tcp.jpg"> -->
                                 </section>
 
 </section>
